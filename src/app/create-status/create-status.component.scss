@@ -1,0 +1,38 @@
+.box{
+  height: 5rem;
+  width: 100%;
+  border: 1px solid black;
+  display: grid;
+  grid-template-rows: 2.5rem 2.5rem;
+
+  .top{
+    grid-row: 1/2;
+    width: 100%;
+  }
+
+  .bot{
+    grid-row: 2/3;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .btn-image{
+      grid-column: 1/2;
+    }
+    .btn-st{
+      grid-column: 2/3;
+    }
+  }
+}
+
+.btn-custom{
+  background: none;
+  border: none;
+  outline: none;
+  background: red;
+  transition: all 0.3s;
+
+  &:hover{
+    background: greenyellow;
+  }
+}
