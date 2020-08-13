@@ -3,19 +3,32 @@
   height: 2.5rem;
   background-color: #002976;
   display: grid;
-  grid-template-areas: "img input input . . group-btn";
+  grid-template-areas: "img input group-btn personal-setting";
+  grid-template-columns: 5rem 30rem auto max-content max-content;
+  grid-column-gap: 1rem;
   padding: 0.25rem 0;
 
   .img{
     grid-area: img;
+    grid-column: 1/2;
   }
 
   .input{
     grid-area: input;
+    outline: none;
+    border: none;
+    padding: 0 0.5rem;
+    grid-column: 2/3;
   }
 
   .group-btn{
     grid-area: group-btn;
+    grid-column: 4/5;
+  }
+
+  .personal-setting{
+    grid-area: personal-setting;
+    grid-column: 5/6;
   }
 }
 

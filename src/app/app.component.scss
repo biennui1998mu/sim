@@ -1,0 +1,8 @@
+.middle{
+  display: grid;
+  grid-template-columns: 30rem auto max-content;
+
+  .friend{
+    grid-column: 3/4;
+  }
+}
