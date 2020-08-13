@@ -1,0 +1,36 @@
+.nav-bar{
+  width: 100%;
+  height: 2.5rem;
+  background-color: #002976;
+  display: grid;
+  grid-template-areas: "img input input . . group-btn";
+  padding: 0.25rem 0;
+
+  .img{
+    grid-area: img;
+  }
+
+  .input{
+    grid-area: input;
+  }
+
+  .group-btn{
+    grid-area: group-btn;
+  }
+}
+
+.btn-custom {
+  border: none;
+  border-radius: 50%;
+  background: none;
+  outline: none;
+  color: white;
+  transition: all 0.3s;
+  margin-right: 0.5rem;
+
+  &:hover{
+    box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+    background: white;
+    color: #002976;
+  }
+}
