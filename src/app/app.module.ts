@@ -10,6 +10,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { InboxComponent } from './inbox/inbox.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,8 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
     NavbarComponent,
     FriendComponent,
     CreateStatusComponent,
-    InboxComponent
+    InboxComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
