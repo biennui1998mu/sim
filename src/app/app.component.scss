@@ -1,12 +1,1 @@
-.middle{
-  display: grid;
-  grid-template-columns: 30rem auto max-content;
-  grid-column-gap: 5rem;
 
-  app-friend{
-    grid-column: 3/4;
-  }
-  app-create-status{
-    grid-column: 2/3;
-  }
-}

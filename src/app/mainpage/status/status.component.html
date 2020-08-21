@@ -1,0 +1,19 @@
+<div class="box" *ngFor="let eachStatus of arrayStatus">
+  <div class="top">
+    <img class="avatar" src="" alt="">
+    <p class="name">{{eachStatus.createdBy}}</p>
+    <small class="time">{{eachStatus.createdAt | date: 'dd/MM/yyyy - hh:mm:ss'}}</small>
+  </div>
+  <div class="middle">
+    <p class="content">
+      {{eachStatus.content}}
+    </p>
+    <hr>
+  </div>
+  <div class="bot">
+    <textarea class="input" type="text" placeholder="Ha sa giiii"></textarea>
+    <button class="btn">
+      <i class="fa fa-paper-plane" aria-hidden="true"></i>
+    </button>
+  </div>
+</div>

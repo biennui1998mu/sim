@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {InboxComponent} from '../inbox/inbox.component';
+import {InboxComponent} from '../../share/inbox/inbox.component';
+import {User} from "../../share/interface/user";
+import {UserService} from "../../share/services/user.service";
 
 @Component({
   selector: 'app-friend',
@@ -9,26 +11,36 @@ import {InboxComponent} from '../inbox/inbox.component';
 })
 export class FriendComponent implements OnInit {
 
+  user: User[];
+
   constructor(
-    public dialog: MatDialog
-  ) { }
+    public dialog: MatDialog,
+    public userService: UserService
+  ) {
+  }
+
+  getUser() {
+    this.userService.getAllUser().subscribe( (result) => {
+      this.user = result;
+    });
+  }
 
   ngOnInit(): void {
+    this.getUser();
   }
 
   openDialog(){
       const dialogRef = this.dialog.open(InboxComponent, {
-        width: '280px',
-        height: `350px`,
+        width: '17.5rem',
+        height: `22rem`,
         position: {
           bottom: `0.5rem`,
-          left: `${230 + 16}px`,
+          right: `16rem`,
         },
-        hasBackdrop: false,
-        panelClass: `setting-modal-box`,
+        hasBackdrop: true,
       });
       dialogRef.afterClosed().subscribe(result => {
-        console.log(`Dialog result: ${result}`);
       });
   }
 }
+

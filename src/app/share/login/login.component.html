@@ -1,0 +1,21 @@
+<div class="bgr" [style.backgroundImage]="bgrImageUrl()"></div>
+<div class="box">
+  <div class="top">
+    <p class="banner">Google</p>
+  </div>
+  <div class="bot">
+    <div class="sign-in">
+      <div class="input id">
+        <i class="fa fa-user" aria-hidden="true"></i>
+        <input type="text" [(ngModel)]="form.username">
+      </div>
+
+      <div class="input pass" >
+        <i class="fa fa-unlock-alt" aria-hidden="true"></i>
+        <input type="password" [(ngModel)]="form.password">
+      </div>
+
+      <button class="btn" (click)="logIn()">Sign In</button>
+    </div>
+  </div>
+</div>

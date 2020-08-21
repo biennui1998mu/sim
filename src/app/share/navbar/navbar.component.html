@@ -10,4 +10,16 @@
     <button class="btn-custom"><i class="fa fa-user" aria-hidden="true"></i></button>
     <button class="btn-custom"><i class="fa fa-cog" aria-hidden="true"></i></button>
   </div>
+
+
+  <button class="btn-custom btn-menu" (click)="toggleMenu()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <div class="menu" *ngIf="menu">
+    <button class="btn-custom"><i class="fa fa-globe" aria-hidden="true"></i></button>
+    <button class="btn-custom"><i class="fa fa-comments" aria-hidden="true"></i></button>
+    <button class="btn-custom"><i class="fa fa-users" aria-hidden="true"></i></button>
+    <button class="btn-custom"><i class="fa fa-user" aria-hidden="true"></i></button>
+    <button class="btn-custom"><i class="fa fa-cog" aria-hidden="true"></i></button>
+  </div>
 </div>

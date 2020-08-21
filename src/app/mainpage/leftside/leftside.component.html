@@ -1,0 +1,31 @@
+<div class="box">
+  <div class="top">
+    <div class="user">
+      <img class="avatar" src="" alt="">
+      <p class="name">{{self.name}}</p>
+      <small class="job">{{self.job}}</small>
+    </div>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <i class="fa fa-users" aria-hidden="true"></i>
+          <p class="padding-left">Group</p>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <i class="fa fa-calendar" aria-hidden="true"></i>
+          <p class="padding-left">Event</p>
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+  </div>
+  <hr>
+  <div class="bot"></div>
+</div>
