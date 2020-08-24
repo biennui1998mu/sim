@@ -6,5 +6,7 @@
     <app-event></app-event>
     <app-status></app-status>
   </div>
-  <app-friend class="right"></app-friend>
+  <app-friend class="right" [friend] = 'user'></app-friend>
 </div>
+
+<small class="calendar">{{now | date: 'hh:mm -- dd/MM/yyyy'}}</small>

@@ -1,0 +1,59 @@
+.page {
+  display: grid;
+  grid-template-areas:
+    'background background'
+    'title title'
+    'events status'
+    'info status';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: max-content max-content max-content auto;
+  grid-column-gap: 3rem;
+
+  .background {
+    grid-area: background;
+    grid-column: 1/3;
+    grid-row: 1/2;
+    width: 100%;
+    height: 30vh;
+    background: red;
+  }
+
+  .title {
+    grid-area: title;
+    grid-column: 1/3;
+    grid-row: 2/3;
+    width: 100%;
+    height: 3.5rem;
+    background: blue;
+    padding: 0 10rem;
+  }
+
+  .events {
+    grid-area: events;
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .info {
+    grid-area: info;
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .status {
+    grid-area: status;
+    grid-column: 2/3;
+    grid-row: 3/5;
+  }
+}
+
+.img-bgr{
+
+}
+.img-avt{
+  border: 3px solid white;
+  background: yellow;
+  min-width: 5rem;
+  min-height: 5rem;
+  border-radius: 50%;
+}

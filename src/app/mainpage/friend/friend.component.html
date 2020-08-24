@@ -1,11 +1,11 @@
 <div class="group">
   <input class="input" type="text">
   <div class="gr-friend">
-    <div class="btn-friend" (click)="openDialog()" *ngFor="let eachUser of user">
+    <div class="btn-friend" (click)="openProfile(eachFriend._id)" *ngFor="let eachFriend of friend">
       <img class="avt" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
-      <p class="name">{{eachUser.name}}</p>
-      <small class="sub-pst" [class.job]="eachUser.job" *ngIf="eachUser.job == 1">it</small>
-      <small class="sub-pst" [class.job]="eachUser.job" *ngIf="eachUser.job == 2">pt</small>
+      <p class="name">{{eachFriend.name | uppercase}}</p>
+      <small class="sub-pst" [class.job]="eachFriend.job" *ngIf="eachFriend.job == 1">it</small>
+      <small class="sub-pst" [class.job]="eachFriend.job" *ngIf="eachFriend.job == 2">pt</small>
     </div>
   </div>
 </div>

@@ -1,7 +1,8 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {LoginComponent} from './share/login/login.component';
+import {LoginComponent} from './share/component/login/login.component';
 import {HomepageComponent} from "./mainpage/homepage.component";
+import {ProfileComponent} from "./share/component/profile/profile.component";
 
 
 const routes: Routes = [
@@ -11,6 +12,8 @@ const routes: Routes = [
     path: 'homepage',
     component: HomepageComponent
   },
+  {path: 'profile/:id', component: ProfileComponent},
+  {path: '**', component: LoginComponent}
 ];
 
 @NgModule({

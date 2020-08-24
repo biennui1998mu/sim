@@ -1,7 +1,7 @@
 <div class="box" *ngFor="let eachStatus of arrayStatus">
   <div class="top">
     <img class="avatar" src="" alt="">
-    <p class="name">{{eachStatus.createdBy}}</p>
+    <p class="name">{{eachStatus.createdBy.name}}</p>
     <small class="time">{{eachStatus.createdAt | date: 'dd/MM/yyyy - hh:mm:ss'}}</small>
   </div>
   <div class="middle">

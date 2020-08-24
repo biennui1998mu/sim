@@ -51,9 +51,9 @@ export class UserService {
       }));
   }
 
-  get() {
+  get(id: string) {
     return this.http.post<APIResponse<User>>(
-      `${this.url}/view`, {},
+      `${this.url}/view`, {_id: id},
       {headers: this.tokenService.authorizeHeader}
     ).pipe(
       map(result => {

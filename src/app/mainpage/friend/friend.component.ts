@@ -1,8 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {InboxComponent} from '../../share/inbox/inbox.component';
+import {InboxComponent} from '../../share/component/inbox/inbox.component';
 import {User} from "../../share/interface/user";
-import {UserService} from "../../share/services/user.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-friend',
@@ -11,36 +11,33 @@ import {UserService} from "../../share/services/user.service";
 })
 export class FriendComponent implements OnInit {
 
-  user: User[];
+  @Input() public friend: User[];
 
   constructor(
     public dialog: MatDialog,
-    public userService: UserService
+    private router: Router
   ) {
   }
 
-  getUser() {
-    this.userService.getAllUser().subscribe( (result) => {
-      this.user = result;
-    });
-  }
-
   ngOnInit(): void {
-    this.getUser();
   }
 
-  openDialog(){
-      const dialogRef = this.dialog.open(InboxComponent, {
-        width: '17.5rem',
-        height: `22rem`,
-        position: {
-          bottom: `0.5rem`,
-          right: `16rem`,
-        },
-        hasBackdrop: true,
-      });
-      dialogRef.afterClosed().subscribe(result => {
-      });
+  // openDialog() {
+  //   const dialogRef = this.dialog.open(InboxComponent, {
+  //     width: '17.5rem',
+  //     height: `22rem`,
+  //     position: {
+  //       bottom: `0.5rem`,
+  //       right: `16rem`,
+  //     },
+  //     hasBackdrop: true,
+  //   });
+  //   dialogRef.afterClosed().subscribe(result => {
+  //   });
+  // }
+
+  openProfile(id){
+    return this.router.navigate(['profile', id]);
   }
 }
 

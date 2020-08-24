@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
-import {StatusFormComponent} from "../../share/status-form/status-form.component";
+import {StatusFormComponent} from "../../share/component/status-form/status-form.component";
 
 @Component({
   selector: 'app-create-status',

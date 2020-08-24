@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from "../../share/services/user.service";
 import {User} from "../../share/interface/user";
+import {TokenService} from "../../share/services/token.service";
 
 @Component({
   selector: 'app-leftside',
@@ -14,7 +15,8 @@ export class LeftsideComponent implements OnInit {
   public self: User = null;
 
   constructor(
-    private user: UserService,
+    private userService: UserService,
+    private tokenService: TokenService
   ) {
     this.get();
   }
@@ -23,7 +25,9 @@ export class LeftsideComponent implements OnInit {
   }
 
   get() {
-    return this.user.get().subscribe((result: User) => {
+    const tokenDecoded = this.tokenService.decodedToken;
+    console.log(tokenDecoded);
+    return this.userService.get(tokenDecoded._id).subscribe((result: User) => {
       console.log(result);
       this.self = result;
     });

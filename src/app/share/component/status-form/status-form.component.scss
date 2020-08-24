@@ -1,0 +1,22 @@
+.page{
+  width: 50vw;
+  height: 50vh;
+}
+
+.input{
+  resize: none;
+  width: 100%;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  background: #e5e5e5;
+
+  &:focus{
+    outline: #e7e7e7;
+  }
+}
+
+.btn-post{
+  background: #009f00;
+  color: white;
+}
