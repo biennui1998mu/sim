@@ -24,6 +24,7 @@ import {FormsModule} from "@angular/forms";
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {StatusFormComponent} from './share/component/status-form/status-form.component';
 import { ProfileComponent } from './share/component/profile/profile.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ProfileComponent } from './share/component/profile/profile.component';
     EventComponent,
     StatusComponent,
     StatusFormComponent,
-    ProfileComponent
+    ProfileComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

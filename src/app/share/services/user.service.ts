@@ -23,7 +23,6 @@ export class UserService {
   getAllUser(): Observable<User[]> {
     return this.http.post<APIResponse>(`${this.url}/`, [], {headers: this.tokenService.authorizeHeader}).pipe(
       map(result => {
-        console.log(result);
         if (!result) {
           return [];
         }

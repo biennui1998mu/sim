@@ -32,7 +32,6 @@ export class LoginComponent implements OnInit {
 
   logIn(){
     return this.user.login(this.form).subscribe( check => {
-      console.log(check);
       if (check){
         return this.router.navigateByUrl('/homepage');
       }

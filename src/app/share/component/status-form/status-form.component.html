@@ -1,4 +1,4 @@
-<div class="page" form>
-  <textarea class="input" name="" id=""></textarea>
+<form (ngSubmit)="create()" class="page">
+  <textarea class="input" [(ngModel)]="statusPost.content" name="content" id=""></textarea>
   <button mat-raised-button class="btn-post">POST</button>
-</div>
+</form>

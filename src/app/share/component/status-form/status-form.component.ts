@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {StatusService} from "../../services/status.service";
+import {MatDialog, MatDialogRef} from "@angular/material/dialog";
 
 @Component({
   selector: 'app-status-form',
@@ -8,14 +9,27 @@ import {StatusService} from "../../services/status.service";
 })
 export class StatusFormComponent implements OnInit {
 
+  public statusPost = {
+    content: null,
+    tagPeople: null,
+    tagGroup: null,
+    file: null
+  };
+
   constructor(
     private statusService: StatusService,
-  ) { }
+    private dialogRef: MatDialogRef<StatusFormComponent>
+    ) {
+  }
 
   ngOnInit(): void {
   }
 
-  create(){
-    this.statusService.create()
+  create() {
+    this.statusService.create(this.statusPost).subscribe(success => {
+      if (success) {
+        return this.dialogRef.close();
+      }
+    });
   }
 }

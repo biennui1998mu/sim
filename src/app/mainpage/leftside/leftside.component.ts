@@ -26,9 +26,7 @@ export class LeftsideComponent implements OnInit {
 
   get() {
     const tokenDecoded = this.tokenService.decodedToken;
-    console.log(tokenDecoded);
     return this.userService.get(tokenDecoded._id).subscribe((result: User) => {
-      console.log(result);
       this.self = result;
     });
   }
